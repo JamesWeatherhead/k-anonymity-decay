@@ -1,0 +1,5 @@
+,age_decade,gender,race,ethnicity,marital_status
+count,133262,133262,133262,133262,133262
+unique,11,28,31,41,18
+top,50.0-59.0,M,white,irish,M
+freq,17416,66576,102771,27560,76662

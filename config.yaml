@@ -1,0 +1,82 @@
+# =============================================================================
+# K-Anonymity Collapse in Multi-Turn Clinical LLM Conversations - Configuration
+# =============================================================================
+# This file contains all configurable parameters for the simulation.
+# Modify these values to adjust the analysis without changing code.
+# =============================================================================
+
+# Data source paths (relative to project root)
+data:
+  base_dir: "./data"  # Set SYNTHEA_DATA_DIR env var or update this path
+  patients_file: "patients.csv"
+  conditions_file: "conditions.csv"
+  medications_file: "medications.csv"
+  procedures_file: "procedures.csv"
+  allergies_file: "allergies.csv"
+  observations_file: "observations.csv"
+  encounters_file: "encounters.csv"
+  careplans_file: "careplans.csv"
+  immunizations_file: "immunizations.csv"
+
+# Simulation parameters
+simulation:
+  # Small-cell thresholds to track (k values)
+  thresholds: [5, 11, 20]
+
+  # Reference date for age calculation (Synthea generation date)
+  reference_date: "2017-12-31"
+
+  # Number of random permutations per patient (Model 2)
+  n_random_permutations: 100
+
+  # Random seed for reproducibility
+  random_seed: 42
+
+  # Rare concept threshold (population frequency < this value)
+  rare_threshold: 0.001  # 0.1% of population
+
+  # Number of parallel workers for simulation
+  n_jobs: -1  # -1 = use all available cores
+
+  # Sample size (null = use full population)
+  sample_size: null
+
+# Quasi-identifier configuration
+quasi_identifiers:
+  # Age binning
+  age_bin_size: 10  # 10-year decades
+
+  # Progressive refinement model turn sequence
+  progressive_sequence:
+    - ["age_decade", "gender"]           # Turn 1
+    - ["race", "ethnicity"]               # Turn 2
+    - ["marital_status"]                  # Turn 3
+    - ["primary_condition"]               # Turn 4
+    - ["secondary_condition"]             # Turn 5
+    - ["primary_medication"]              # Turn 6
+    - ["has_procedure"]                   # Turn 7
+    - ["has_allergy"]                     # Turn 8
+    - ["first_encounter_year"]            # Turn 9
+
+# Output configuration
+output:
+  results_dir: "results"
+  figures_dir: "results/figures"
+  tables_dir: "results/tables"
+  simulation_output_dir: "results/simulation_output"
+
+  # Figure settings
+  figure_dpi: 300
+  figure_format: ["pdf", "png"]
+
+  # Style settings for publication
+  style:
+    font_family: "Arial"
+    font_size: 10
+    title_size: 12
+    label_size: 10
+
+# Logging configuration
+logging:
+  level: "INFO"
+  log_file: "results/simulation.log"

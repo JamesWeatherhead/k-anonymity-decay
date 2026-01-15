@@ -1,0 +1,34 @@
+# =============================================================================
+# Quasi-Identifier Accumulation Study
+# Requirements for reproducing the analysis
+# =============================================================================
+# Installation: pip install -r requirements.txt
+# Python version: 3.9+
+# =============================================================================
+
+# Core data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Statistical analysis
+scipy>=1.10.0
+
+# Configuration management
+pyyaml>=6.0
+
+# Progress bars
+tqdm>=4.65.0
+
+# Parallel processing
+joblib>=1.3.0
+
+# Testing
+pytest>=7.0.0
+
+# Jupyter notebooks
+jupyter>=1.0.0
+ipykernel>=6.0.0

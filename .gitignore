@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+run_full.log
+
+# Large simulation outputs (regenerate with main.py)
+results/simulation_output/*raw_results.csv
+
+# Synthea dataset (download from https://synthea.mitre.org/downloads)
+synthea_dataset_csv/
+synthea_sample_data*/
+*.csv.gz
+
+# Environment
+.env
+.env.local
+venv/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Private manuscript and templates (DO NOT PUBLISH)
+manuscript/
+latex/
+Frontiers_LaTeX_Templates/
+PROJECT_DOCUMENTATION.md
+create_example_trace_figure.py
+monitor.py
+.claude/
+
+# Internal peer review documents (DO NOT PUBLISH)
+PEER_REVIEW_REVISIONS.md
+tests/test_peer_review_validation.py
