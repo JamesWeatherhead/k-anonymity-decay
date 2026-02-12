@@ -81,7 +81,7 @@ class Visualizer:
     def plot_k_decay_curves(
         self,
         k_by_turn: pd.DataFrame,
-        title: str = "Anonymity Set Size (k) Across Disclosure Turns",
+        title: str = "Anonymity Set Size (k) Across Disclosure Steps",
         thresholds: List[int] = [5, 11, 20],
         log_scale: bool = True,
         show_ci: bool = True
@@ -117,7 +117,7 @@ class Visualizer:
                       label=f'k = {threshold}')
 
         # Formatting
-        ax.set_xlabel('Disclosure Turn', fontweight='bold')
+        ax.set_xlabel('Disclosure Step', fontweight='bold')
         ax.set_ylabel('Anonymity Set Size (k)', fontweight='bold')
         ax.set_title(title, fontweight='bold', pad=15)
 
@@ -145,7 +145,7 @@ class Visualizer:
     ) -> plt.Figure:
         """Figure 2: Histogram of turns to reach small-cell threshold by model."""
         if title is None:
-            title = f"Distribution of Turns to Reach k < {threshold}"
+            title = f"Distribution of Steps to Reach k < {threshold}"
 
         # Collect turns data from all models
         turns_data = []
@@ -193,7 +193,7 @@ class Visualizer:
             ax.axvline(median, color='black', linestyle='--', linewidth=2, label=f'Median: {median:.1f}')
 
             # Formatting
-            ax.set_xlabel('Turns', fontweight='bold')
+            ax.set_xlabel('Steps', fontweight='bold')
             if ax == axes[0]:
                 ax.set_ylabel('Proportion', fontweight='bold')
             ax.set_title(model_name, fontweight='bold')
@@ -220,7 +220,7 @@ class Visualizer:
                    fmt='.1f', linewidths=0.5, cbar_kws={'label': 'Median % k Reduction'})
 
         ax.set_title(title, fontweight='bold', pad=15)
-        ax.set_xlabel('Turn Position', fontweight='bold')
+        ax.set_xlabel('Step Position', fontweight='bold')
         ax.set_ylabel('Quasi-Identifier', fontweight='bold')
 
         plt.tight_layout()
@@ -254,7 +254,7 @@ class Visualizer:
                     ax.step(turns, survival, where='post', linewidth=2,
                            linestyle=linestyle, label=f'k ≥ {threshold}')
 
-            ax.set_xlabel('Disclosure Turn', fontweight='bold')
+            ax.set_xlabel('Disclosure Step', fontweight='bold')
             if ax == axes[0]:
                 ax.set_ylabel('% Patients Above Threshold', fontweight='bold')
             ax.set_title(model_name, fontweight='bold')
@@ -312,7 +312,7 @@ class Visualizer:
         self,
         all_results: Dict[str, Any],
         k_by_turn: pd.DataFrame,
-        title: str = "Multi-Turn Disclosure Risk Summary"
+        title: str = "Multi-Step Disclosure Risk Summary"
     ) -> plt.Figure:
         """Summary panel combining key visualizations for graphical abstract."""
         fig = plt.figure(figsize=(14, 10))
@@ -331,7 +331,7 @@ class Visualizer:
         ax1.axhline(y=5, color='gray', linestyle='--', alpha=0.7)
         ax1.axhline(y=11, color='gray', linestyle=':', alpha=0.7)
         ax1.set_yscale('log')
-        ax1.set_xlabel('Disclosure Turn')
+        ax1.set_xlabel('Disclosure Step')
         ax1.set_ylabel('Median k (log scale)')
         ax1.set_title('A) k Decay by Model', fontweight='bold')
         ax1.legend(fontsize=8)
@@ -346,7 +346,7 @@ class Visualizer:
                 ax2.step(model_data['turn'], survival, where='post',
                         color=COLORS[model_key], label=model_name, linewidth=2)
 
-        ax2.set_xlabel('Disclosure Turn')
+        ax2.set_xlabel('Disclosure Step')
         ax2.set_ylabel('% Patients with k ≥ 5')
         ax2.set_title('B) Survival Above k=5', fontweight='bold')
         ax2.set_ylim(-5, 105)
@@ -370,8 +370,8 @@ class Visualizer:
 
         if medians:
             bars = ax3.bar(model_names_list, medians, color=colors_list, edgecolor='white', linewidth=1.5)
-            ax3.set_ylabel('Median Turns to k < 5')
-            ax3.set_title('C) Turns to Small-Cell', fontweight='bold')
+            ax3.set_ylabel('Median Steps to k < 5')
+            ax3.set_title('C) Steps to Small-Cell', fontweight='bold')
 
             # Add value labels on bars
             for bar, val in zip(bars, medians):

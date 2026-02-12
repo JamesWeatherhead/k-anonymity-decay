@@ -1,19 +1,11 @@
 analysis_timestamp: '2026-01-11T17:30:42.028664'
-data_dir: /Users/jacweath/Desktop/synthea_1m_fhir_3_0_May_24/output_2/csv
+data_dir: synthea_dataset_csv/
 elapsed_time_seconds: 19319.0254611969
 figure_paths:
-  fig1_k_decay_curves:
-  - results/figures/fig1_k_decay_curves.pdf
-  - results/figures/fig1_k_decay_curves.png
-  fig2_turns_to_threshold:
-  - results/figures/fig2_turns_to_threshold.pdf
-  - results/figures/fig2_turns_to_threshold.png
-  fig4_survival_curves:
-  - results/figures/fig4_survival_curves.pdf
-  - results/figures/fig4_survival_curves.png
-  summary_panel:
-  - results/figures/summary_panel.pdf
-  - results/figures/summary_panel.png
+  fig1_chat_mockup: assets/fig1.png
+  fig2_k_decay_curves: assets/fig2.pdf
+  fig3_steps_to_threshold: assets/fig3.pdf
+  fig4_survival_curves: assets/fig4.pdf
 n_patients_population: 133262
 n_patients_simulated: 5000
 n_random_permutations: 30

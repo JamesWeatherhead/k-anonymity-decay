@@ -53,6 +53,15 @@ create_example_trace_figure.py
 monitor.py
 .claude/
 
-# Internal peer review documents (DO NOT PUBLISH)
-PEER_REVIEW_REVISIONS.md
+# Root-level markdown (except README)
+/*.md
+!README.md
+
+# Internal test extensions
 tests/test_peer_review_validation.py
+
+# Non-canonical figure formats
+assets/*_submission.*
+assets/*_k_decay_*
+assets/*_survival_*
+results/figures/
