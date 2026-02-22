@@ -1,0 +1,44 @@
+analysis_timestamp: '2026-02-21T22:44:34.269280'
+data_dir: ./synthea_dataset_csv
+elapsed_time_seconds: 12190.888571977615
+figure_paths:
+  fig1_k_decay_curves:
+  - results/figures/fig1_k_decay_curves.pdf
+  - results/figures/fig1_k_decay_curves.png
+  fig2_turns_to_threshold:
+  - results/figures/fig2_turns_to_threshold.pdf
+  - results/figures/fig2_turns_to_threshold.png
+  fig4_survival_curves:
+  - results/figures/fig4_survival_curves.pdf
+  - results/figures/fig4_survival_curves.png
+  summary_panel:
+  - results/figures/summary_panel.pdf
+  - results/figures/summary_panel.png
+n_patients_population: 133262
+n_patients_simulated: 5000
+n_random_permutations: 30
+output_dir: results
+random_seed: 42
+results_summary:
+  progressive:
+    median_turns_to_k11: 7.0
+    median_turns_to_k5: 7.0
+    n_simulations: 5000
+    pct_reaching_k11: 86.22
+    pct_reaching_k5: 79.88
+  random:
+    median_turns_to_k11: 7.0
+    median_turns_to_k5: 8.0
+    n_simulations: 150000
+    pct_reaching_k11: 86.22
+    pct_reaching_k5: 79.88
+  rarity:
+    median_turns_to_k11: 4.0
+    median_turns_to_k5: 4.0
+    n_simulations: 5000
+    pct_reaching_k11: 86.22
+    pct_reaching_k5: 79.88
+thresholds:
+- 5
+- 11
+- 20
