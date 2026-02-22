@@ -395,6 +395,10 @@ class SimulationRunner:
 
         # Compute k statistics by turn
         k_columns = [c for c in results_df.columns if c.startswith('k_turn_')]
+        # Forward-fill k values for patients with fewer than max disclosure steps
+        # (carry forward final k for patients with incomplete QI sequences)
+        k_columns_sorted = sorted(k_columns, key=lambda x: int(x.split('_')[-1]))
+        results_df[k_columns_sorted] = results_df[k_columns_sorted].ffill(axis=1)
         k_stats_list = []
 
         for col in sorted(k_columns, key=lambda x: int(x.split('_')[-1])):

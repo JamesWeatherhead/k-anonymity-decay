@@ -21,7 +21,7 @@
   <img src="assets/fig2.png" alt="K-anonymity decay curves" width="700">
 </p>
 
-**~80% of patients reach k < 5 within a typical clinical conversation.**
+**79.9% (3,994 of 5,000 patients) reach k < 5, and 86.2% (4,311) reach k < 11, within a typical clinical conversation.**
 
 | Disclosure Model | Median Steps to k<5 | Description |
 |------------------|----------------------|-------------|
@@ -64,7 +64,7 @@ This study uses **Synthea** synthetic EHR data (publicly available, no IRB requi
 # Quick test (~30 min)
 python main.py --data-dir /path/to/output_2 --sample-size 1000 --n-permutations 10
 
-# Full analysis (~5 hours)
+# Full analysis (~3.4 hours)
 python main.py --data-dir /path/to/output_2 --sample-size 5000 --n-permutations 30 --seed 42
 ```
 

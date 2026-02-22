@@ -203,7 +203,7 @@ def run_full_analysis(
         k11_row = thresh_stats[thresh_stats['threshold'] == 11]
 
         report['results_summary'][model_name] = {
-            'n_simulations': results.n_patients,
+            'n_simulations': results.n_simulations,
             'pct_reaching_k5': float(k5_row['pct_reached'].values[0]) if len(k5_row) > 0 else None,
             'median_turns_to_k5': float(k5_row['median_turns'].values[0]) if len(k5_row) > 0 and pd.notna(k5_row['median_turns'].values[0]) else None,
             'pct_reaching_k11': float(k11_row['pct_reached'].values[0]) if len(k11_row) > 0 else None,

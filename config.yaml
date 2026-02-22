@@ -27,7 +27,7 @@ simulation:
   reference_date: "2017-12-31"
 
   # Number of random permutations per patient (Model 2)
-  n_random_permutations: 100
+  n_random_permutations: 30
 
   # Random seed for reproducibility
   random_seed: 42
@@ -39,7 +39,7 @@ simulation:
   n_jobs: -1  # -1 = use all available cores
 
   # Sample size (null = use full population)
-  sample_size: null
+  sample_size: 5000
 
 # Quasi-identifier configuration
 quasi_identifiers:
