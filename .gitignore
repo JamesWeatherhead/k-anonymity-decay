@@ -1,67 +1,41 @@
 # Python
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-*.egg-info/
-dist/
-build/
-
-# Testing
+*.pyc
 .pytest_cache/
 .coverage
-htmlcov/
+*.egg-info/
+build/
+dist/
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-run_full.log
-
-# Large simulation outputs (regenerate with main.py)
-results/simulation_output/*raw_results.csv
-
-# Synthea dataset (download from https://synthea.mitre.org/downloads)
-synthea_dataset_csv/
-synthea_sample_data*/
-*.csv.gz
-
-# Environment
-.env
-.env.local
+# Virtual environments
 venv/
 .venv/
 
-# Jupyter
-.ipynb_checkpoints/
+# OS
+.DS_Store
 
-# Private manuscript and templates (DO NOT PUBLISH)
+# Environment
+.env
+
+# Data
+synthea_dataset_csv/
+synthea_sample_data*/
+*.csv.gz
+data
+
+# Outputs
+results/figures/
+results/simulation_output/*raw_results.csv
+*.log
+
+# Manuscript
 manuscript/
-latex/
-Frontiers_LaTeX_Templates/
-PROJECT_DOCUMENTATION.md
-create_example_trace_figure.py
-monitor.py
-.claude/
-
-# Root-level markdown (except README)
+Final Work/
 /*.md
 !README.md
 
-# Internal test extensions
-tests/test_peer_review_validation.py
-
-# Non-canonical figure formats
+# Figures
 assets/*_submission.*
 assets/*_k_decay_*
 assets/*_survival_*
-results/figures/
+assets/*.tiff

@@ -156,12 +156,12 @@ def run_full_analysis(
 
     viz = Visualizer(output_dir=str(figures_dir))
 
-    # Figure 1: k decay curves
-    logger.info("Generating Figure 1: k decay curves...")
+    # Figure 2: k decay curves
+    logger.info("Generating Figure 2: k decay curves...")
     viz.plot_k_decay_curves(combined_k_by_turn)
 
-    # Figure 2: Turns to threshold distribution
-    logger.info("Generating Figure 2: Turns to threshold distribution...")
+    # Figure 3: Turns to threshold distribution
+    logger.info("Generating Figure 3: Turns to threshold distribution...")
     viz.plot_turns_to_threshold_distribution(all_results, threshold=5)
 
     # Figure 4: Survival curves

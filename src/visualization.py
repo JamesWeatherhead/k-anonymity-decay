@@ -134,7 +134,7 @@ class Visualizer:
 
         plt.tight_layout()
 
-        self._figures['fig1_k_decay_curves'] = fig
+        self._figures['fig2_k_decay_curves'] = fig
         return fig
 
     def plot_turns_to_threshold_distribution(
@@ -216,29 +216,7 @@ class Visualizer:
         fig.suptitle(title, fontweight='bold', y=1.02)
         plt.tight_layout()
 
-        self._figures['fig2_turns_to_threshold'] = fig
-        return fig
-
-    def plot_qi_impact_heatmap(
-        self,
-        qi_impact_data: pd.DataFrame,
-        title: str = "Quasi-Identifier Impact on Anonymity Set Size"
-    ) -> plt.Figure:
-        """Figure 3: Heatmap of QI impact on k reduction."""
-        fig, ax = plt.subplots(figsize=(10, 6))
-
-        # Create heatmap
-        cmap = sns.diverging_palette(220, 20, as_cmap=True)
-        sns.heatmap(qi_impact_data, ax=ax, cmap='YlOrRd', annot=True,
-                   fmt='.1f', linewidths=0.5, cbar_kws={'label': 'Median % k Reduction'})
-
-        ax.set_title(title, fontweight='bold', pad=15)
-        ax.set_xlabel('Step Position', fontweight='bold')
-        ax.set_ylabel('Quasi-Identifier', fontweight='bold')
-
-        plt.tight_layout()
-
-        self._figures['fig3_qi_impact_heatmap'] = fig
+        self._figures['fig3_turns_to_threshold'] = fig
         return fig
 
     def plot_survival_curves(
