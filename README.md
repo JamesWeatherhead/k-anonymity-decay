@@ -102,12 +102,20 @@ pytest tests/ -v
 
 ## Citation
 
+If you use this work, please cite the published article:
+
+> Weatherhead J, Hasan A, Weatherhead J, Golovko G, Grant B, Garcia JD, Certuche HS, Powell RP, Abril JM and McCaffrey P (2026) K-anonymity decay in multi-turn clinical large language model conversations. *Front. Digit. Health* 8:1832168. doi: 10.3389/fdgth.2026.1832168
+
 ```bibtex
-@unpublished{weatherhead2025kanonymity,
-  title={K-Anonymity Decay in Multi-Turn Clinical LLM Conversations},
-  author={Weatherhead, James},
-  note={Under review at Frontiers in Digital Health},
-  year={2025}
+@article{weatherhead2026kanonymity,
+  title   = {{K}-anonymity decay in multi-turn clinical large language model conversations},
+  author  = {Weatherhead, James and Hasan, Azra and Weatherhead, Jake and Golovko, George and Grant, Bradley and Garcia, Juan David and Certuche, Hugo Sebastian and Powell, Reuben Peter and Abril, Jose Marri and McCaffrey, Peter},
+  journal = {Frontiers in Digital Health},
+  volume  = {8},
+  pages   = {1832168},
+  year    = {2026},
+  doi     = {10.3389/fdgth.2026.1832168},
+  url     = {https://doi.org/10.3389/fdgth.2026.1832168}
 }
 ```
 

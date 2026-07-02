@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the published article."
+title: "K-Anonymity Decay in Multi-Turn Clinical LLM Conversations"
+authors:
+  - family-names: Weatherhead
+    given-names: James
+  - family-names: Hasan
+    given-names: Azra
+  - family-names: Weatherhead
+    given-names: Jake
+  - family-names: Golovko
+    given-names: George
+  - family-names: Grant
+    given-names: Bradley
+  - family-names: Garcia
+    given-names: "Juan David"
+  - family-names: Certuche
+    given-names: "Hugo Sebastian"
+  - family-names: Powell
+    given-names: "Reuben Peter"
+  - family-names: Abril
+    given-names: "Jose Marri"
+  - family-names: McCaffrey
+    given-names: Peter
+repository-code: "https://github.com/JamesWeatherhead/k-anonymity-decay"
+license: MIT
+preferred-citation:
+  type: article
+  title: "K-anonymity decay in multi-turn clinical large language model conversations"
+  authors:
+    - family-names: Weatherhead
+      given-names: James
+    - family-names: Hasan
+      given-names: Azra
+    - family-names: Weatherhead
+      given-names: Jake
+    - family-names: Golovko
+      given-names: George
+    - family-names: Grant
+      given-names: Bradley
+    - family-names: Garcia
+      given-names: "Juan David"
+    - family-names: Certuche
+      given-names: "Hugo Sebastian"
+    - family-names: Powell
+      given-names: "Reuben Peter"
+    - family-names: Abril
+      given-names: "Jose Marri"
+    - family-names: McCaffrey
+      given-names: Peter
+  journal: "Frontiers in Digital Health"
+  year: 2026
+  volume: 8
+  start: 1832168
+  doi: "10.3389/fdgth.2026.1832168"
