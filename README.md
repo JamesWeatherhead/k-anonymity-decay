@@ -1,7 +1,13 @@
 # K-Anonymity Decay in Multi-Turn Clinical LLM Conversations
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Cite: Frontiers Digital Health](https://img.shields.io/badge/Cite-Front._Digit._Health_2026-green)](https://doi.org/10.3389/fdgth.2026.1832168)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+![Data: Synthea](https://img.shields.io/badge/Data-Synthea_(synthetic)-brightgreen)
+![Synthetic patients](https://img.shields.io/badge/Synthetic_patients-133%2C262-orange)
+![Reach k<5](https://img.shields.io/badge/Reach_k%3C5-79.9%25-red)
+
+> 📄 **How to cite:** If you use this work, please cite the peer-reviewed paper — Weatherhead et al. (2026), *Frontiers in Digital Health* **8**, 1832168, doi:[10.3389/fdgth.2026.1832168](https://doi.org/10.3389/fdgth.2026.1832168). See [full citation ↓](#citation).
 
 ## The Problem
 
@@ -104,7 +110,9 @@ pytest tests/ -v
 
 If you use this work, please cite the published article:
 
-> Weatherhead J, Hasan A, Weatherhead J, Golovko G, Grant B, Garcia JD, Certuche HS, Powell RP, Abril JM and McCaffrey P (2026) K-anonymity decay in multi-turn clinical large language model conversations. *Front. Digit. Health* 8:1832168. doi: 10.3389/fdgth.2026.1832168
+> Weatherhead J, Hasan A, Weatherhead J, Golovko G, Grant B, Garcia JD, Certuche HS, Powell RP, Abril JM and McCaffrey P (2026) K-anonymity decay in multi-turn clinical large language model conversations. *Front. Digit. Health* 8:1832168. doi: [10.3389/fdgth.2026.1832168](https://doi.org/10.3389/fdgth.2026.1832168)
+
+**Read the paper:** https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1832168/full
 
 ```bibtex
 @article{weatherhead2026kanonymity,
